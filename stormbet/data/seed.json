@@ -1,0 +1,1095 @@
+{
+ "generated_at": "2026-10-18",
+ "comment": "Seed collected by web research on 2026-10-18. Overwritten/enriched by `npm run ingest` (Liquipedia LPDB, Fortnite Tracker, Esports Earnings, Twitch). Regions without source are best-effort and get corrected by ingestion.",
+ "teams": [
+  {
+   "name": "Falcons"
+  },
+  {
+   "name": "Gen.G"
+  },
+  {
+   "name": "Red Bull Gaming"
+  },
+  {
+   "name": "XSET"
+  }
+ ],
+ "players": [
+  {
+   "handle": "SwizzY",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Pixie",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Malibuca",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "vic0",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Merstach",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Queasy",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": 1265000,
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_highest-earning_Fortnite_players"
+   ]
+  },
+  {
+   "handle": "MariusCOW",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Vanyak3kk",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Setty",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Japko",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Panzer",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "IDrop",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Charyy",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Kami",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Pixx",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Fredoxie",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "PabloWingu",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Tjino",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "P1ng",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Wox",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Chap",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "MrSavage",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Rezon",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Demus",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Darm",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Cr1nge",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Twi",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "shxrk",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "t3eny",
+   "region": "Europe",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Rapid",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Boltz",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Khanada",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Curve",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Higgs",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Acorn",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Cold",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "yuma",
+   "region": null,
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Koyota",
+   "region": null,
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Muz",
+   "region": null,
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Shadow",
+   "region": null,
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Sphinx",
+   "region": null,
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "psalm",
+   "region": null,
+   "country": null,
+   "team": null,
+   "earnings_usd": null,
+   "sources": []
+  },
+  {
+   "handle": "Scroll",
+   "region": "Europe",
+   "country": "DK",
+   "team": null,
+   "earnings_usd": null,
+   "sources": [
+    "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Major_1/Europe"
+   ]
+  },
+  {
+   "handle": "Sky",
+   "region": "Europe",
+   "country": "DK",
+   "team": null,
+   "earnings_usd": null,
+   "sources": [
+    "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Major_1/Europe"
+   ]
+  },
+  {
+   "handle": "Veno",
+   "region": "NA Central",
+   "country": null,
+   "team": null,
+   "earnings_usd": 940000,
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_highest-earning_Fortnite_players"
+   ]
+  },
+  {
+   "handle": "Peterbot",
+   "region": "NA Central",
+   "country": "US",
+   "team": "Falcons",
+   "earnings_usd": 907000,
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_highest-earning_Fortnite_players",
+    "https://en.wikipedia.org/wiki/Peterbot"
+   ]
+  },
+  {
+   "handle": "Pollo",
+   "region": "NA Central",
+   "country": "US",
+   "team": "Falcons",
+   "earnings_usd": null,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Pollo_(gamer)"
+   ]
+  },
+  {
+   "handle": "Clix",
+   "region": "NA Central",
+   "country": "US",
+   "team": "XSET",
+   "earnings_usd": null,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Clix_(gamer)"
+   ]
+  },
+  {
+   "handle": "Bugha",
+   "region": "NA Central",
+   "country": "US",
+   "team": null,
+   "earnings_usd": 3770000,
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_highest-earning_Fortnite_players"
+   ]
+  },
+  {
+   "handle": "Mongraal",
+   "region": "Europe",
+   "country": "GB",
+   "team": "Red Bull Gaming",
+   "earnings_usd": null,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mongraal"
+   ]
+  },
+  {
+   "handle": "Ritual",
+   "region": "NA Central",
+   "country": null,
+   "team": "Gen.G",
+   "earnings_usd": null,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gen.G"
+   ]
+  },
+  {
+   "handle": "Ajerss",
+   "region": "NA Central",
+   "country": null,
+   "team": "Gen.G",
+   "earnings_usd": null,
+   "sources": [
+    "https://en.wikipedia.org/wiki/Gen.G"
+   ]
+  }
+ ],
+ "tournaments": [
+  {
+   "slug": "world-cup-2019-solo",
+   "name": "Fortnite World Cup 2019 — Solo",
+   "series": "World Cup",
+   "tier": "world",
+   "mode": "solo",
+   "region": "Global",
+   "location": "New York, USA",
+   "start_at": "2019-07-28T16:00:00Z",
+   "end_at": "2019-07-28T22:00:00Z",
+   "prize_pool_usd": 30000000,
+   "field_size": 100,
+   "status": "completed",
+   "field_status": "confirmed",
+   "source_url": "https://en.wikipedia.org/wiki/2019_Fortnite_World_Cup",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2019_Fortnite_World_Cup"
+   ],
+   "notes": null,
+   "results": [
+    {
+     "placement": 1,
+     "players": [
+      "Bugha"
+     ],
+     "points": null,
+     "prize_usd": 3000000
+    },
+    {
+     "placement": 2,
+     "players": [
+      "psalm"
+     ],
+     "points": null,
+     "prize_usd": 1800000
+    }
+   ],
+   "entries": []
+  },
+  {
+   "slug": "fncs-2024-global-championship",
+   "name": "FNCS 2024 Global Championship",
+   "series": "FNCS",
+   "tier": "world",
+   "mode": "duo",
+   "region": "Global",
+   "location": "Fort Worth, USA",
+   "start_at": "2024-09-07T17:00:00Z",
+   "end_at": "2024-09-08T22:00:00Z",
+   "prize_pool_usd": null,
+   "field_size": 50,
+   "status": "completed",
+   "field_status": "confirmed",
+   "source_url": "https://en.wikipedia.org/wiki/2024_FNCS_Global_Championship",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2024_FNCS_Global_Championship"
+   ],
+   "notes": null,
+   "results": [
+    {
+     "placement": 1,
+     "players": [
+      "Peterbot",
+      "Pollo"
+     ],
+     "points": null,
+     "prize_usd": null
+    }
+   ],
+   "entries": []
+  },
+  {
+   "slug": "fncs-2025-global-championship",
+   "name": "FNCS 2025 Global Championship (Trios)",
+   "series": "FNCS",
+   "tier": "world",
+   "mode": "trio",
+   "region": "Global",
+   "location": "Lyon-Décines, France",
+   "start_at": "2025-09-06T15:00:00Z",
+   "end_at": "2025-09-07T21:00:00Z",
+   "prize_pool_usd": null,
+   "field_size": 33,
+   "status": "completed",
+   "field_status": "confirmed",
+   "source_url": "https://en.wikipedia.org/wiki/2025_FNCS_Global_Championship",
+   "sources": [
+    "https://en.wikipedia.org/wiki/2025_FNCS_Global_Championship",
+    "https://sportskeeda.com/fortnite/news-fortnite-fncs-2025-global-championship-results"
+   ],
+   "notes": null,
+   "results": [
+    {
+     "placement": 1,
+     "players": [
+      "Merstach",
+      "SwizzY",
+      "Queasy"
+     ],
+     "points": 697,
+     "prize_usd": 450000
+    },
+    {
+     "placement": 2,
+     "players": [
+      "MariusCOW",
+      "Pixie",
+      "Vanyak3kk"
+     ],
+     "points": 650,
+     "prize_usd": null
+    },
+    {
+     "placement": 3,
+     "players": [
+      "Setty",
+      "Japko",
+      "Panzer"
+     ],
+     "points": 590,
+     "prize_usd": null
+    },
+    {
+     "placement": 4,
+     "players": [
+      "IDrop",
+      "Charyy",
+      "Kami"
+     ],
+     "points": 539,
+     "prize_usd": null
+    },
+    {
+     "placement": 5,
+     "players": [
+      "Boltz",
+      "Rapid",
+      "Khanada"
+     ],
+     "points": 518,
+     "prize_usd": null
+    },
+    {
+     "placement": 6,
+     "players": [
+      "Darm",
+      "Demus",
+      "Pixx"
+     ],
+     "points": 512,
+     "prize_usd": null
+    },
+    {
+     "placement": 7,
+     "players": [
+      "Fredoxie",
+      "PabloWingu",
+      "Tjino"
+     ],
+     "points": 511,
+     "prize_usd": null
+    },
+    {
+     "placement": 8,
+     "players": [
+      "P1ng",
+      "Wox",
+      "Malibuca"
+     ],
+     "points": 481,
+     "prize_usd": null
+    },
+    {
+     "placement": 9,
+     "players": [
+      "Chap",
+      "MrSavage",
+      "Rezon"
+     ],
+     "points": 403,
+     "prize_usd": null
+    },
+    {
+     "placement": 10,
+     "players": [
+      "Muz",
+      "Shadow",
+      "Sphinx"
+     ],
+     "points": 402,
+     "prize_usd": null
+    }
+   ],
+   "entries": []
+  },
+  {
+   "slug": "fncs-2026-major-1-eu",
+   "name": "FNCS 2026 Major 1 — Europe Grand Finals",
+   "series": "FNCS",
+   "tier": "major",
+   "mode": "duo",
+   "region": "Europe",
+   "location": "Online",
+   "start_at": "2026-04-25T16:00:00Z",
+   "end_at": "2026-04-26T21:00:00Z",
+   "prize_pool_usd": 591500,
+   "field_size": 50,
+   "status": "completed",
+   "field_status": "confirmed",
+   "source_url": "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Major_1/Europe",
+   "sources": [
+    "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Major_1/Europe"
+   ],
+   "notes": null,
+   "results": [
+    {
+     "placement": 1,
+     "players": [
+      "Sky",
+      "Scroll"
+     ],
+     "points": null,
+     "prize_usd": 120000
+    },
+    {
+     "placement": 3,
+     "players": [
+      "vic0",
+      "Malibuca"
+     ],
+     "points": null,
+     "prize_usd": null
+    }
+   ],
+   "entries": []
+  },
+  {
+   "slug": "fncs-2026-major-1-nac",
+   "name": "FNCS 2026 Major 1 — NA Central Grand Finals",
+   "series": "FNCS",
+   "tier": "major",
+   "mode": "duo",
+   "region": "NA Central",
+   "location": "Online",
+   "start_at": "2026-04-25T22:00:00Z",
+   "end_at": "2026-04-26T03:00:00Z",
+   "prize_pool_usd": null,
+   "field_size": 50,
+   "status": "completed",
+   "field_status": "confirmed",
+   "source_url": "https://esports.gg/news/fortnite/fncs-major-1-2026/",
+   "sources": [
+    "https://esports.gg/news/fortnite/fncs-major-1-2026/"
+   ],
+   "notes": null,
+   "results": [
+    {
+     "placement": 1,
+     "players": [
+      "Curve",
+      "Veno"
+     ],
+     "points": 727,
+     "prize_usd": 100000
+    },
+    {
+     "placement": 2,
+     "players": [
+      "Ajerss",
+      "Ritual"
+     ],
+     "points": null,
+     "prize_usd": null
+    },
+    {
+     "placement": 3,
+     "players": [
+      "Acorn",
+      "Boltz"
+     ],
+     "points": null,
+     "prize_usd": null
+    }
+   ],
+   "entries": []
+  },
+  {
+   "slug": "fncs-2026-major-2-nac",
+   "name": "FNCS 2026 Major 2 — NA Central Grand Finals",
+   "series": "FNCS",
+   "tier": "major",
+   "mode": "duo",
+   "region": "NA Central",
+   "location": "Online",
+   "start_at": "2026-08-01T22:00:00Z",
+   "end_at": "2026-08-02T03:00:00Z",
+   "prize_pool_usd": null,
+   "field_size": 50,
+   "status": "completed",
+   "field_status": "confirmed",
+   "source_url": "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Major_2/North_America_Central",
+   "sources": [
+    "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Major_2/North_America_Central"
+   ],
+   "notes": null,
+   "results": [
+    {
+     "placement": 1,
+     "players": [
+      "Acorn",
+      "Boltz"
+     ],
+     "points": 617,
+     "prize_usd": 100000
+    },
+    {
+     "placement": 2,
+     "players": [
+      "Ritual",
+      "Cold"
+     ],
+     "points": null,
+     "prize_usd": null
+    },
+    {
+     "placement": 3,
+     "players": [
+      "Ajerss",
+      "Veno"
+     ],
+     "points": null,
+     "prize_usd": null
+    }
+   ],
+   "entries": []
+  },
+  {
+   "slug": "fncs-2026-global-championship",
+   "name": "FNCS 2026 Global Championship (Duos)",
+   "series": "FNCS",
+   "tier": "world",
+   "mode": "duo",
+   "region": "Global",
+   "location": "Anvers, Belgique",
+   "start_at": "2026-09-26T14:00:00Z",
+   "end_at": "2026-09-27T20:00:00Z",
+   "prize_pool_usd": 2000000,
+   "field_size": 50,
+   "status": "completed",
+   "field_status": "confirmed",
+   "source_url": "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Statistics",
+   "sources": [
+    "https://liquipedia.net/fortnite/Fortnite_Champion_Series/2026/Statistics",
+    "https://gamertagmythras.com/blog/fortnite/fncs-global-championship-2026-results"
+   ],
+   "notes": null,
+   "results": [
+    {
+     "placement": 1,
+     "players": [
+      "SwizzY",
+      "Pixie"
+     ],
+     "points": 525,
+     "prize_usd": 400000
+    },
+    {
+     "placement": 2,
+     "players": [
+      "shxrk",
+      "t3eny"
+     ],
+     "points": 523,
+     "prize_usd": null
+    },
+    {
+     "placement": 3,
+     "players": [
+      "Malibuca",
+      "vic0"
+     ],
+     "points": 521,
+     "prize_usd": null
+    },
+    {
+     "placement": 4,
+     "players": [
+      "Rapid",
+      "Clix"
+     ],
+     "points": 443,
+     "prize_usd": null
+    },
+    {
+     "placement": 5,
+     "players": [
+      "Scroll",
+      "Sky"
+     ],
+     "points": 425,
+     "prize_usd": null
+    },
+    {
+     "placement": 6,
+     "players": [
+      "Cr1nge",
+      "Twi"
+     ],
+     "points": 424,
+     "prize_usd": null
+    },
+    {
+     "placement": 7,
+     "players": [
+      "Tjino",
+      "PabloWingu"
+     ],
+     "points": 422,
+     "prize_usd": null
+    },
+    {
+     "placement": 8,
+     "players": [
+      "yuma",
+      "Koyota"
+     ],
+     "points": 392,
+     "prize_usd": null
+    },
+    {
+     "placement": 9,
+     "players": [
+      "Demus",
+      "Darm"
+     ],
+     "points": 370,
+     "prize_usd": null
+    },
+    {
+     "placement": 10,
+     "players": [
+      "Curve",
+      "Higgs"
+     ],
+     "points": 362,
+     "prize_usd": null
+    }
+   ],
+   "entries": []
+  },
+  {
+   "slug": "fncs-2026-solo-major-eu",
+   "name": "FNCS 2026 Solo Major — Europe Finals",
+   "series": "FNCS",
+   "tier": "major",
+   "mode": "solo",
+   "region": "Europe",
+   "location": "Online",
+   "start_at": "2026-10-26T17:00:00Z",
+   "end_at": "2026-10-27T21:00:00Z",
+   "prize_pool_usd": null,
+   "field_size": null,
+   "status": "upcoming",
+   "field_status": "provisional",
+   "source_url": "https://beebom.com/fortnite-fncs-2026/",
+   "sources": [
+    "https://beebom.com/fortnite-fncs-2026/"
+   ],
+   "notes": "Calendrier publié : Heats + Last Chance du 17 au 20 oct., finales les 26-27 oct. 2026 (source : Beebom, à confirmer sur fortnite.com/competitive). Horaire exact à confirmer. Champ provisoire : joueurs projetés d'après la Storm Rating, remplacés par les qualifiés officiels après les Heats.",
+   "results": [],
+   "entries": [
+    [
+     "SwizzY"
+    ],
+    [
+     "Pixie"
+    ],
+    [
+     "Malibuca"
+    ],
+    [
+     "vic0"
+    ],
+    [
+     "Merstach"
+    ],
+    [
+     "Queasy"
+    ],
+    [
+     "MariusCOW"
+    ],
+    [
+     "Vanyak3kk"
+    ],
+    [
+     "Setty"
+    ],
+    [
+     "Japko"
+    ],
+    [
+     "Panzer"
+    ],
+    [
+     "IDrop"
+    ],
+    [
+     "Charyy"
+    ],
+    [
+     "Kami"
+    ],
+    [
+     "Pixx"
+    ],
+    [
+     "Fredoxie"
+    ],
+    [
+     "PabloWingu"
+    ],
+    [
+     "Tjino"
+    ],
+    [
+     "P1ng"
+    ],
+    [
+     "Wox"
+    ],
+    [
+     "Chap"
+    ],
+    [
+     "MrSavage"
+    ],
+    [
+     "Rezon"
+    ],
+    [
+     "Demus"
+    ],
+    [
+     "Darm"
+    ],
+    [
+     "Cr1nge"
+    ],
+    [
+     "Twi"
+    ],
+    [
+     "shxrk"
+    ],
+    [
+     "t3eny"
+    ],
+    [
+     "Scroll"
+    ],
+    [
+     "Sky"
+    ],
+    [
+     "Mongraal"
+    ]
+   ]
+  },
+  {
+   "slug": "fncs-2026-solo-major-nac",
+   "name": "FNCS 2026 Solo Major — NA Central Finals",
+   "series": "FNCS",
+   "tier": "major",
+   "mode": "solo",
+   "region": "NA Central",
+   "location": "Online",
+   "start_at": "2026-10-26T23:00:00Z",
+   "end_at": "2026-10-27T03:00:00Z",
+   "prize_pool_usd": null,
+   "field_size": null,
+   "status": "upcoming",
+   "field_status": "provisional",
+   "source_url": "https://beebom.com/fortnite-fncs-2026/",
+   "sources": [
+    "https://beebom.com/fortnite-fncs-2026/"
+   ],
+   "notes": "Calendrier publié : Heats + Last Chance du 17 au 20 oct., finales les 26-27 oct. 2026 (source : Beebom, à confirmer sur fortnite.com/competitive). Horaire exact à confirmer. Champ provisoire : joueurs projetés d'après la Storm Rating, remplacés par les qualifiés officiels après les Heats.",
+   "results": [],
+   "entries": [
+    [
+     "Rapid"
+    ],
+    [
+     "Boltz"
+    ],
+    [
+     "Khanada"
+    ],
+    [
+     "Curve"
+    ],
+    [
+     "Higgs"
+    ],
+    [
+     "Acorn"
+    ],
+    [
+     "Cold"
+    ],
+    [
+     "Veno"
+    ],
+    [
+     "Peterbot"
+    ],
+    [
+     "Pollo"
+    ],
+    [
+     "Clix"
+    ],
+    [
+     "Bugha"
+    ],
+    [
+     "Ritual"
+    ],
+    [
+     "Ajerss"
+    ]
+   ]
+  }
+ ]
+}

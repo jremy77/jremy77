@@ -1,0 +1,26 @@
+# MediaMTX (https://github.com/bluenviron/mediamtx) — serveur de diffusion pour les
+# joueurs partenaires. Les joueurs streament depuis OBS vers rtmp://<hôte>:1935/live
+# avec la clé générée dans l'admin StormBet ("<slug>?key=sb_live_...").
+# Remplace CHANGE_ME par la valeur de MEDIA_AUTH_SECRET.
+
+authMethod: http
+authHTTPAddress: http://127.0.0.1:3000/api/media/auth?secret=CHANGE_ME
+authHTTPExclude:
+  - action: read
+  - action: playback
+
+rtmp: yes
+rtmpAddress: :1935
+hls: yes
+hlsAddress: :8888
+hlsVariant: lowLatency
+hlsAllowOrigin: '*'
+rtsp: no
+webrtc: no
+srt: no
+
+paths:
+  "~^live/[a-z0-9-]+$":
+    runOnUnpublish: >-
+      curl -s -X POST -H 'Content-Type: application/json'
+      "http://127.0.0.1:3000/api/media/unpublish?secret=CHANGE_ME&path=$MTX_PATH"

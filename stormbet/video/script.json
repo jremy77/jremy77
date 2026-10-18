@@ -1,0 +1,139 @@
+{
+ "voice": {
+  "model": "fr-siwis-medium",
+  "length_scale": 1.12,
+  "noise_scale": 0.55,
+  "noise_w": 0.7
+ },
+ "promo": [
+  {
+   "id": "intro",
+   "shot": null,
+   "caption": "STORMBET",
+   "text": "Regardez… L'île s'éveille sous un ciel immense. Bienvenue sur StormBet."
+  },
+  {
+   "id": "home",
+   "shot": "home",
+   "caption": "Les compétitions officielles Fortnite",
+   "text": "Ici, chaque compétition officielle Fortnite devient une aventure."
+  },
+  {
+   "id": "signup",
+   "shot": "register",
+   "caption": "1 — Inscription gratuite · 1 000 FLUX",
+   "text": "L'inscription est gratuite… et mille FLUX vous attendent.",
+   "focus": [
+    0.3,
+    0.15,
+    0.4,
+    0.7
+   ]
+  },
+  {
+   "id": "flux",
+   "shot": "wallet",
+   "caption": "2 — Les FLUX, monnaie 100 % virtuelle",
+   "text": "Les FLUX, notre monnaie virtuelle : elle ne s'achète pas, elle se gagne.",
+   "focus": [
+    0.1,
+    0.15,
+    0.8,
+    0.35
+   ]
+  },
+  {
+   "id": "events",
+   "shot": "tournaments",
+   "caption": "3 — Choisis un tournoi",
+   "text": "Choisissez un tournoi : FNCS, Majors, Global Championship."
+  },
+  {
+   "id": "odds",
+   "shot": "odds",
+   "caption": "4 — Des cotes calculées sur le vrai niveau",
+   "text": "Chaque cote est calculée avec soin, sur le vrai niveau des joueurs.",
+   "focus": [
+    0.1,
+    0.3,
+    0.65,
+    0.4
+   ]
+  },
+  {
+   "id": "h2h",
+   "shot": "h2h",
+   "caption": "Vainqueur · Podium · Top 10 · Duels",
+   "text": "Vainqueur, podium, top dix ou duel : suivez votre intuition.",
+   "focus": [
+    0.1,
+    0.4,
+    0.8,
+    0.45
+   ]
+  },
+  {
+   "id": "slip",
+   "shot": "slip",
+   "caption": "5 — Ajoute au ticket et valide",
+   "text": "Ajoutez vos choix au ticket… puis validez, en douceur.",
+   "focus": [
+    0.72,
+    0.35,
+    0.28,
+    0.62
+   ]
+  },
+  {
+   "id": "live",
+   "shot": "player",
+   "caption": "6 — Regarde le live de ton joueur",
+   "text": "Et suivez en direct le joueur sur qui vous avez parié.",
+   "live": true
+  },
+  {
+   "id": "drop",
+   "shot": "missions",
+   "caption": "Ravitaillement quotidien · Défis · Niveaux",
+   "text": "Ravitaillement quotidien, défis, niveaux…"
+  },
+  {
+   "id": "shop",
+   "shot": "shop",
+   "caption": "Boutique de cosmétiques · Classement",
+   "text": "et des objets rares, pour briller au classement."
+  },
+  {
+   "id": "outro",
+   "shot": null,
+   "caption": "STORMBET",
+   "text": "StormBet. Le frisson de la compétition, la sérénité du jeu. On vous attend."
+  }
+ ],
+ "teaser": [
+  {
+   "id": "t1",
+   "shot": null,
+   "caption": "",
+   "text": "Le ciel s'ouvre…"
+  },
+  {
+   "id": "t2",
+   "shot": "players",
+   "caption": "Les plus grands joueurs",
+   "text": "La tempête approche."
+  },
+  {
+   "id": "t3",
+   "shot": "odds",
+   "caption": "Des cotes en direct",
+   "text": "Bientôt, pariez sur les légendes de Fortnite."
+  },
+  {
+   "id": "t4",
+   "shot": null,
+   "caption": "STORMBET",
+   "text": "StormBet. Sautez du bus."
+  }
+ ]
+}

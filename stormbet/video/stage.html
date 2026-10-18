@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>StormBet stage</title>
+<style>
+@font-face { font-family: 'Luckiest Guy'; src: url('/fonts/luckiest-guy/luckiest-guy-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-weight: 700; src: url('/fonts/rajdhani/rajdhani-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-weight: 500; src: url('/fonts/rajdhani/rajdhani-latin-500-normal.woff2') format('woff2'); }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #070b24; font-family: Rajdhani, sans-serif; color: #fff; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: Rajdhani, sans-serif; color: #fff; }
+.layer { position: absolute; inset: 0; }
+#sky { background: linear-gradient(180deg, #0d4fd6 0%, #2f8cff 55%, #9adcff 100%); }
+#night { background: radial-gradient(1200px 600px at 85% -10%, rgba(123,47,247,.45), transparent 60%), radial-gradient(900px 500px at -10% 10%, rgba(47,140,255,.3), transparent 60%), linear-gradient(180deg,#070b24,#0e1540); }
+#grid { background-image: linear-gradient(rgba(41,240,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(41,240,255,.07) 1px, transparent 1px); background-size: 60px 60px; }
+.cloud { position: absolute; background: #fff; border-radius: 200px; opacity: .92; }
+.cloud::before, .cloud::after { content: ''; position: absolute; background: #fff; border-radius: 50%; }
+.cloud::before { width: 55%; height: 170%; left: 12%; top: -75%; }
+.cloud::after { width: 40%; height: 130%; right: 12%; top: -50%; }
+#storm { position: absolute; width: 1500px; height: 1500px; border-radius: 50%; left: 900px; top: -500px;
+  background: radial-gradient(circle, transparent 50%, rgba(196,107,255,.55) 55%, rgba(123,47,247,.9) 63%, rgba(42,10,94,.97) 78%); }
+#island { position: absolute; left: -10%; width: 120%; height: 300px; bottom: -120px; border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 0%, #5fd47a 0 40%, #2f8f4a 41% 60%, transparent 61%); }
+#bus { position: absolute; width: 330px; }
+#screen { position: absolute; left: 470px; top: 120px; width: 1360px; height: 765px; border-radius: 22px; overflow: hidden;
+  border: 3px solid rgba(41,240,255,.8); box-shadow: 0 0 60px rgba(41,240,255,.35), 0 40px 80px rgba(0,0,0,.6); background: #000; transform-origin: 50% 50%; }
+#screen img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+#screen .scan { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 2px, transparent 2px 4px); pointer-events: none; }
+#live { position: absolute; right: 70px; top: 300px; width: 640px; height: 360px; border-radius: 16px; overflow: hidden; border: 3px solid #ff3cf2; box-shadow: 0 0 50px rgba(255,60,242,.5); background: #0b1030; }
+#live canvas { width: 100%; height: 100%; }
+#live .tag { position: absolute; left: 14px; top: 12px; background: #ff2d55; padding: 4px 12px; border-radius: 8px; font-weight: 700; letter-spacing: 2px; }
+#live .who { position: absolute; left: 14px; bottom: 12px; font-family: 'Luckiest Guy'; font-size: 30px; text-shadow: 0 3px 0 #000; }
+#live .note { position: absolute; right: 12px; bottom: 12px; font-size: 16px; opacity: .8; }
+#step { position: absolute; left: 470px; top: 36px; display: flex; align-items: center; gap: 16px; }
+#step .txt { font-family: 'Luckiest Guy'; font-size: 46px; transform: skew(-8deg); text-shadow: 0 4px 0 #2a0a5e, 0 0 24px rgba(41,240,255,.5); white-space: nowrap; }
+#subs { position: absolute; left: 470px; width: 1360px; bottom: 54px; text-align: center; font-size: 40px; font-weight: 700; text-shadow: 0 3px 8px #000, 0 0 2px #000; }
+#subs span { background: rgba(7,11,36,.72); padding: 6px 18px; border-radius: 12px; box-decoration-break: clone; -webkit-box-decoration-break: clone; line-height: 1.5; }
+#host { position: absolute; width: 400px; height: 400px; }
+#host .ring { position: absolute; inset: -14px; border-radius: 50%; border: 5px solid #29f0ff; box-shadow: 0 0 40px #29f0ff, inset 0 0 30px rgba(41,240,255,.6); }
+#host .ring2 { position: absolute; inset: -30px; border-radius: 50%; border: 2px dashed rgba(196,107,255,.8); }
+#host svg { width: 100%; height: 100%; border-radius: 50%; }
+#hosttag { position: absolute; padding: 6px 16px; border-radius: 10px; background: linear-gradient(90deg,#7b2ff7,#2f8cff); font-weight: 700; font-size: 24px; letter-spacing: 1px; white-space: nowrap; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+#logo { position: absolute; left: 50%; top: 40%; transform: translate(-50%,-50%); display: flex; align-items: center; gap: 26px; }
+#logo img { width: 150px; height: 150px; filter: drop-shadow(0 0 30px #29f0ff); }
+#logo .w { font-family: 'Luckiest Guy'; font-size: 150px; transform: skew(-8deg); text-shadow: 0 10px 0 #2a0a5e, 0 0 50px rgba(41,240,255,.7); }
+#logo .w b { color: #ffc531; font-weight: 400; }
+#tagline { position: absolute; left: 0; right: 0; top: 60%; text-align: center; font-family: 'Luckiest Guy'; font-size: 64px; transform: skew(-8deg); text-shadow: 0 5px 0 #2a0a5e; }
+#tagline em { font-style: normal; color: #ffc531; }
+#cta { position: absolute; left: 0; right: 0; top: 74%; text-align: center; }
+#cta span { display: inline-block; font-family: 'Luckiest Guy'; font-size: 44px; color: #2b1a00; padding: 16px 40px; border-radius: 18px; background: linear-gradient(180deg,#ffe25c,#ffb800); box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+#legal { position: absolute; left: 0; right: 0; bottom: 26px; text-align: center; font-size: 22px; color: #cfdcff; text-shadow: 0 2px 4px #000; }
+#flash { position: absolute; inset: 0; background: #fff; pointer-events: none; }
+#wipe { position: absolute; left: 50%; top: 50%; border-radius: 50%; background: radial-gradient(circle, #c46bff, #7b2ff7 60%, #2a0a5e); transform: translate(-50%,-50%); pointer-events: none; }
+.bolt { position: absolute; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="layer" id="sky"><div id="storm"></div><div id="clouds"></div><img id="bus" src="/img/bus.svg"><div id="island"></div></div>
+  <div class="layer" id="night"><div class="layer" id="grid"></div></div>
+  <div id="screen"><img id="shotA"><img id="shotB"><div class="scan"></div></div>
+  <div id="live"><canvas width="640" height="360" id="livecv"></canvas><span class="tag">● LIVE</span><span class="who">SwizzY</span><span class="note">Illustration — live du joueur partenaire</span></div>
+  <div id="step"><img src="/img/logo.svg" width="70" height="70"><span class="txt" id="steptxt"></span></div>
+  <div id="logo"><img src="/img/logo.svg"><span class="w">STORM<b>BET</b></span></div>
+  <div id="tagline"></div>
+  <div id="cta"><span id="ctatxt"></span></div>
+  <div id="legal"></div>
+  <div id="host"><div class="ring2"></div><div class="ring"></div>
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bg" cx=".5" cy=".35" r=".75"><stop offset="0" stop-color="#4fb3ff"/><stop offset="1" stop-color="#2a0a5e"/></radialGradient>
+        <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d48bff"/><stop offset=".6" stop-color="#7b2ff7"/><stop offset="1" stop-color="#4a148c"/></linearGradient>
+        <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f8cff"/><stop offset="1" stop-color="#0d2f8a"/></linearGradient>
+        <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c9a4"/><stop offset="1" stop-color="#e2a87f"/></linearGradient>
+      </defs>
+      <rect width="400" height="400" fill="url(#bg)"/>
+      <g id="body">
+        <path d="M40 400 C50 320 110 292 160 284 L240 284 C290 292 350 320 360 400 Z" fill="url(#jacket)"/>
+        <path d="M160 284 L200 344 L240 284" fill="none" stroke="#ffc531" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M70 360 C90 330 120 316 150 308" stroke="#29f0ff" stroke-width="4" fill="none" opacity=".9"/>
+        <path d="M330 360 C310 330 280 316 250 308" stroke="#29f0ff" stroke-width="4" fill="none" opacity=".9"/>
+        <rect x="176" y="236" width="48" height="56" rx="18" fill="#e2a87f"/>
+        <circle cx="300" cy="350" r="14" fill="#ffc531"/><path d="M302 340 l-8 12 h7 l-3 10 l9 -13 h-7 z" fill="#2b1a00"/>
+      </g>
+      <g id="head">
+        <path d="M108 168 C104 84 160 52 204 54 C258 56 302 92 296 170 C300 214 300 250 292 272 L250 262 L150 262 L110 272 C100 250 104 214 108 168 Z" fill="url(#hair)"/>
+        <ellipse cx="200" cy="172" rx="76" ry="90" fill="url(#skin)"/>
+        <g id="eyes">
+          <g id="eyeL" transform="translate(170 168)"><ellipse rx="15" ry="17" fill="#fff"/><circle r="10" fill="#1aa6d9"/><circle r="5.5" fill="#0a1450"/><circle cx="3" cy="-4" r="3" fill="#fff"/></g>
+          <g id="eyeR" transform="translate(232 168)"><ellipse rx="15" ry="17" fill="#fff"/><circle r="10" fill="#1aa6d9"/><circle r="5.5" fill="#0a1450"/><circle cx="3" cy="-4" r="3" fill="#fff"/></g>
+        </g>
+        <path id="browL" d="M150 140 Q170 128 188 138" stroke="#4a148c" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path id="browR" d="M214 138 Q232 128 252 140" stroke="#4a148c" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M200 182 Q196 200 204 206" stroke="#c98563" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <ellipse cx="156" cy="206" rx="14" ry="8" fill="#ff8fa3" opacity=".45"/><ellipse cx="246" cy="206" rx="14" ry="8" fill="#ff8fa3" opacity=".45"/>
+        <g id="mouth" transform="translate(201 228)">
+          <path id="smile" d="M-22 -2 Q0 14 22 -2" stroke="#9c3b4a" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <g id="open"><ellipse id="mo" rx="17" ry="10" fill="#5a1626"/><ellipse id="tongue" cy="5" rx="10" ry="4" fill="#e0607a"/><path id="teeth" d="M-12 -7 Q0 -11 12 -7 L12 -4 Q0 -7 -12 -4 Z" fill="#fff"/></g>
+        </g>
+        <path d="M110 150 C100 70 170 40 220 52 C280 64 300 110 296 160 C270 120 230 104 200 100 C170 112 140 126 110 150 Z" fill="url(#hair)"/>
+        <path d="M150 74 C180 60 240 62 266 90" stroke="#f0c7ff" stroke-width="6" fill="none" opacity=".7" stroke-linecap="round"/>
+        <path d="M104 160 C96 90 150 34 206 36 C262 38 306 90 298 160" stroke="#11173f" stroke-width="12" fill="none"/>
+        <rect x="86" y="146" width="30" height="58" rx="12" fill="#11173f"/><rect x="92" y="156" width="18" height="38" rx="7" fill="#29f0ff"/>
+        <path d="M104 196 C110 236 140 246 172 238" stroke="#11173f" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="176" cy="237" r="7" fill="#29f0ff"/>
+      </g>
+    </svg>
+  </div>
+  <div id="hosttag">NOVA · votre guide StormBet</div>
+  <div id="wipe"></div>
+  <div id="flash"></div>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+const ease = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+const back = (x) => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const show = (el, on) => (el.style.display = on ? '' : 'none');
+
+const clouds = Array.from({ length: 9 }, (_, i) => {
+  const d = document.createElement('div');
+  d.className = 'cloud';
+  const w = 120 + ((i * 53) % 160);
+  Object.assign(d.style, { width: `${w}px`, height: `${w * 0.3}px`, top: `${60 + ((i * 97) % 420)}px` });
+  $('clouds').append(d);
+  return { el: d, speed: 30 + ((i * 37) % 50), offset: (i * 260) % 2200 };
+});
+
+// Stylised "match" for the live window: a shrinking storm circle over an island map.
+function drawLive(t) {
+  const cv = $('livecv'); const g = cv.getContext('2d');
+  g.fillStyle = '#2f8cff'; g.fillRect(0, 0, 640, 360);
+  g.fillStyle = '#4fbf6a'; g.beginPath(); g.ellipse(320, 185, 260, 150, 0, 0, Math.PI * 2); g.fill();
+  g.fillStyle = '#3a9a55'; for (let i = 0; i < 14; i++) { g.beginPath(); g.arc(120 + ((i * 97) % 400), 90 + ((i * 61) % 190), 14 + (i % 4) * 6, 0, Math.PI * 2); g.fill(); }
+  const r = 210 - (t % 6) * 18;
+  g.save(); g.beginPath(); g.rect(0, 0, 640, 360); g.arc(330, 180, r, 0, Math.PI * 2, true); g.fillStyle = 'rgba(123,47,247,.55)'; g.fill('evenodd'); g.restore();
+  g.strokeStyle = '#fff'; g.lineWidth = 3; g.beginPath(); g.arc(330, 180, r, 0, Math.PI * 2); g.stroke();
+  for (let i = 0; i < 9; i++) {
+    const a = t * 0.6 + i * 0.7; const rr = (r - 30) * (0.3 + ((i * 37) % 60) / 100);
+    g.fillStyle = i === 0 ? '#ffc531' : '#ff4d6d';
+    g.beginPath(); g.arc(330 + Math.cos(a) * rr, 180 + Math.sin(a * 1.3) * rr * 0.6, i === 0 ? 9 : 6, 0, Math.PI * 2); g.fill();
+  }
+  g.fillStyle = 'rgba(0,0,0,.45)'; g.fillRect(470, 14, 156, 66); g.fillStyle = '#fff'; g.font = 'bold 20px Rajdhani';
+  g.fillText(`Joueurs : ${Math.max(3, 37 - Math.floor(t * 1.5) % 30)}`, 482, 40); g.fillText('Élims : 4', 482, 66);
+}
+
+function placeHost(t, mode, amp) {
+  const host = $('host'); const tag = $('hosttag');
+  const big = mode === 'big';
+  const size = big ? 560 : 360;
+  const x = big ? 170 : 60; const y = big ? 300 : 650;
+  Object.assign(host.style, { left: `${x}px`, top: `${y + Math.sin(t * 1.3) * 6}px`, width: `${size}px`, height: `${size}px` });
+  Object.assign(tag.style, { left: `${x + size / 2}px`, top: `${y + size + 26}px`, transform: 'translateX(-50%)', fontSize: big ? '30px' : '22px' });
+  // Head motion: gentle sway + small nods while speaking.
+  $('head').setAttribute('transform', `rotate(${Math.sin(t * 0.9) * 2.5 + amp * 2} 200 240) translate(0 ${Math.sin(t * 1.7) * 2 - amp * 3})`);
+  // Blink every ~3.4 s.
+  const bt = (t + 0.7) % 3.4; const blink = bt < 0.14 ? Math.abs(Math.cos((bt / 0.14) * Math.PI)) : 1;
+  for (const id of ['eyeL', 'eyeR']) { const e = $(id); const [tx, ty] = id === 'eyeL' ? [170, 168] : [232, 168]; e.setAttribute('transform', `translate(${tx} ${ty}) scale(1 ${Math.max(0.08, blink)})`); }
+  const browLift = amp * 5;
+  $('browL').setAttribute('transform', `translate(0 ${-browLift})`); $('browR').setAttribute('transform', `translate(0 ${-browLift})`);
+  const open = clamp(amp * 1.25);
+  show($('open'), open > 0.06); show($('smile'), open <= 0.06);
+  $('mo').setAttribute('ry', 3 + open * 15); $('mo').setAttribute('rx', 15 + open * 4 - open * open * 3);
+  $('tongue').setAttribute('cy', 2 + open * 9);
+}
+
+window.render = (t) => {
+  const T = window.TIMELINE; const fps = T.fps;
+  const amp = T.amp[Math.min(T.amp.length - 1, Math.floor(t * fps))] || 0;
+  const scene = T.scenes.find((s) => t >= s.start && t < s.end) || T.scenes[T.scenes.length - 1];
+  const p = (t - scene.start) / (scene.end - scene.start);
+  const k = scene.kind;
+
+  // Backgrounds
+  const skyScene = k === 'intro' || k === 'outro' || k === 'sky';
+  show($('sky'), skyScene); show($('night'), !skyScene);
+  if (skyScene) {
+    clouds.forEach((c) => (c.el.style.left = `${((c.offset + t * c.speed * 3) % 2400) - 300}px`));
+    $('bus').style.left = `${-380 + ((t - scene.start) / 7) * 2400}px`;
+    $('bus').style.top = `${170 + Math.sin(t * 2) * 10}px`;
+    $('storm').style.transform = `scale(${1 - Math.min(0.25, (t - scene.start) * 0.03)}) rotate(${t * 6}deg)`;
+  }
+  $('grid').style.backgroundPosition = `0 ${t * 30}px`;
+
+  // Screen with Ken Burns towards the focus rectangle
+  const isShot = k === 'shot' || k === 'live';
+  show($('screen'), isShot); show($('step'), isShot && !!scene.caption); show($('subs'), true);
+  if (isShot) {
+    const img = $('shotA');
+    if (img.dataset.src !== scene.shot) { img.src = `/shots/${scene.shot}.png`; img.dataset.src = scene.shot; }
+    show($('shotB'), false);
+    const [fx, fy, fw, fh] = scene.focus || [0, 0, 1, 1];
+    const e = ease(clamp(p * 1.15));
+    const W = 1360, H = 765;
+    const s0 = W / 1920;
+    const s1 = Math.min(W / (fw * 1920), H / (fh * 1080), s0 * 1.6);
+    const s = s0 + (s1 - s0) * e;
+    const cx = (fx + fw / 2) * 1920 * e + 960 * (1 - e);
+    const cy = (fy + fh / 2) * 1080 * e + 540 * (1 - e);
+    const tx = clamp(W / 2 - cx * s, W - 1920 * s, 0);
+    const ty = clamp(H / 2 - cy * s, H - 1080 * s, 0);
+    img.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`;
+    const enter = ease(clamp((t - scene.start) / 0.5));
+    $('screen').style.transform = `perspective(1800px) rotateY(${(1 - enter) * -14 + Math.sin(t * 0.5) * 1.2}deg) translateX(${(1 - enter) * 160}px) scale(${0.96 + enter * 0.04})`;
+    $('screen').style.opacity = enter;
+    $('steptxt').textContent = scene.caption;
+    $('step').style.transform = `translateX(${(1 - ease(clamp((t - scene.start - 0.15) / 0.45))) * -60}px)`;
+    $('step').style.opacity = clamp((t - scene.start - 0.15) / 0.45);
+  }
+  show($('live'), k === 'live');
+  if (k === 'live') { drawLive(t); $('live').style.transform = `scale(${back(clamp((t - scene.start - 0.6) / 0.6))})`; }
+
+  // Logo / tagline / CTA
+  const logoOn = k === 'intro' || k === 'outro' || (k === 'sky' && scene.logo);
+  show($('logo'), logoOn); show($('tagline'), logoOn && !!scene.tagline); show($('cta'), logoOn && !!scene.cta); show($('legal'), logoOn && !!scene.legal);
+  if (logoOn) {
+    const d = t - scene.start - (scene.logoDelay || 0.4);
+    $('logo').style.transform = `translate(-50%,-50%) scale(${d < 0 ? 0 : back(clamp(d / 0.8))})`;
+    $('logo').style.left = scene.logoX || '50%';
+    $('tagline').innerHTML = scene.tagline || '';
+    $('tagline').style.opacity = clamp((d - 0.8) / 0.6);
+    $('ctatxt').textContent = scene.cta || '';
+    $('cta').style.transform = `scale(${back(clamp((d - 1.4) / 0.6))})`;
+    $('legal').textContent = scene.legal || '';
+    const off = (scene.host === 'big') ? '560px' : '0px';
+    $('tagline').style.left = off; $('cta').style.left = off;
+    $('legal').style.opacity = clamp((d - 1.8) / 0.6);
+  }
+
+  // Host
+  const hostMode = scene.host || 'small';
+  show($('host'), hostMode !== 'none'); show($('hosttag'), hostMode !== 'none');
+  if (hostMode !== 'none') placeHost(t, hostMode, amp);
+  $('host').style.opacity = hostMode === 'none' ? 0 : clamp((t - (scene.hostIn ?? -1)) / 0.6);
+
+  // Subtitles
+  const sub = T.subs.find((s) => t >= s.start && t < s.end);
+  $('subs').innerHTML = sub ? `<span>${sub.text}</span>` : '';
+  $('subs').style.left = hostMode === 'big' ? '700px' : '470px';
+  $('subs').style.width = hostMode === 'big' ? '1160px' : '1360px';
+
+  // Transitions: storm wipe at scene boundaries, white flash on logo hits
+  const toEnd = scene.end - t; const fromStart = t - scene.start;
+  const w = Math.max(clamp(1 - fromStart / 0.35), scene.last ? 0 : clamp(1 - toEnd / 0.35));
+  $('wipe').style.width = $('wipe').style.height = `${w * 2400}px`;
+  $('wipe').style.opacity = w > 0 ? 0.95 : 0;
+  const flashAt = (scene.flash ?? -1);
+  $('flash').style.opacity = flashAt >= 0 ? clamp(1 - Math.abs(t - scene.start - flashAt) / 0.25) * 0.8 : 0;
+};
+window.ready = document.fonts.ready.then(() => Promise.all([...document.images].map((i) => i.decode().catch(() => {}))));
+</script>
+<div id="subs"></div>
+</body>
+</html>
