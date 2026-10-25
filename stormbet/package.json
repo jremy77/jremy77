@@ -1,0 +1,28 @@
+{
+  "name": "stormbet",
+  "version": "1.0.0",
+  "description": "StormBet — paris esport Fortnite en monnaie virtuelle FLUX",
+  "scripts": {
+    "test": "node --no-warnings --test test/*.test.js",
+    "start": "node --no-warnings server/index.js",
+    "ingest": "node --no-warnings scripts/ingest.js",
+    "video:capture": "node video/capture.mjs",
+    "video:voice": "node video/voice.mjs",
+    "video:render": "node video/render.mjs promo && node video/render.mjs teaser"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/luckiest-guy": "^5.3.0",
+    "@fontsource/orbitron": "^5.3.0",
+    "@fontsource/rajdhani": "^5.3.0",
+    "express": "^4.22.3",
+    "hls.js": "^1.7.3"
+  },
+  "devDependencies": {
+    "playwright": "1.56"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.5"
+  }
+}
